@@ -1,0 +1,17 @@
+{
+  "name": "mygraphic",
+  "version": "1.0.0",
+  "homepage": "https://github.com/magdielduarte/mygraphic",
+  "authors": [
+    "Magdiel <magdiel.kesller@gmail.com>"
+  ],
+  "description": "simple web app for graphic generate",
+  "main": "index.html",
+  "keywords": [
+    "graphic",
+    "webapp",
+    "generate"
+  ],
+  "license": "MIT",
+  "private": true
+}

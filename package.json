@@ -1,0 +1,27 @@
+{
+  "name": "mygraphic",
+  "version": "1.0.0",
+  "description": "simple web app for graphic generate",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magdielduarte/mygraphic"
+  },
+  "keywords": [
+    "graphic",
+    "generate",
+    "mygraphic",
+    "webapp"
+  ],
+  "private": true,
+  "dependencies": {
+    "gulp": "*",
+    "bower": "*"
+  },
+  "author": "Diel Duarte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magdielduarte/mygraphic/issues"
+  },
+  "homepage": "https://github.com/magdielduarte/mygraphic"
+}
