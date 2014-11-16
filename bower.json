@@ -13,5 +13,8 @@
     "generate"
   ],
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "bootstrap-material-design": "~0.1.5"
+  }
 }
