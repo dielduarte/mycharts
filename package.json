@@ -16,7 +16,9 @@
   "private": true,
   "dependencies": {
     "gulp": "*",
-    "bower": "*"
+    "bower": "*",
+    "gulp-rename": "^1.2.0",
+    "gulp-htmlmin": "^0.1.3"
   },
   "author": "Diel Duarte",
   "license": "MIT",
