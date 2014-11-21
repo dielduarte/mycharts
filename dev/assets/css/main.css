@@ -19,3 +19,31 @@
 
 /* force color style in links */
 	a { color: #000 !important; }
+
+/* font size mobiwhale default */
+	.mobiwhale-title { 
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 900;
+		font-size: 13px;
+		margin: 6px 0; }
+
+	.logo { 
+		position: absolute; 
+		bottom: 0; 
+		margin-bottom: 20px; }
+
+		.logo img { 
+			-webkit-animation: lightscrool 2s infinite;  Chrome, Safari, Opera  
+    		animation: lightscrool 2s infinite; }
+
+@keyframes lightscrool {
+	0% { top: 0; }
+	50% { top: 20px; }
+	100% { top: 0; }
+}
+
+@-webkit-keyframes lightscrool {
+	0% { margin-bottom: 20px; }
+	50% { margin-bottom: 40px; }
+	100% { margin-bottom: 20px; }
+}

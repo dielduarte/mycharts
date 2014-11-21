@@ -2,14 +2,15 @@ var gulp  = require('gulp'),
 rename    = require('gulp-rename'),
 htmlmin   = require('gulp-htmlmin'),
 minifyCSS = require('gulp-minify-css'),
-concat    = require('gulp-concat');
+concat    = require('gulp-concat'),
+imagemin  = require('gulp-imagemin');
 
 
 
 var pathsDev = {
   html: ['./dev/*.html'],
   styles: ['./dev/assets/css/*.css'],
-  svg:['./dev/assets/svg/*.*']
+  image: ['./dev/assets/img/*.*']
 };
 
 
@@ -19,6 +20,14 @@ gulp.task('minifyhtml', function() {
     .pipe(htmlmin({collapseWhitespace: true, removeComments:true, removeCommentsFromCDATA:true}))
     .pipe(gulp.dest('./build/'));
 });
+
+
+// Task for minifier the images
+gulp.task('imagemin',function () {
+  gulp.src(pathsDev.image)
+    .pipe(imagemin())
+    .pipe(gulp.dest('./build/assets/img/'));
+})
 
 
 // Task for concat and minfier  and convert sass to css files 
@@ -37,7 +46,7 @@ gulp.task('watch',function(){
 });
 
 // Taks default gulp! 
-gulp.task('default', ['minifyhtml', 'concat-min-css', 'watch'], function(){
+gulp.task('default', ['imagemin', 'minifyhtml', 'concat-min-css', 'watch'], function(){
 	console.log('gulp ok!');
 });
 
