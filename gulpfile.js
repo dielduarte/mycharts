@@ -9,6 +9,7 @@ concat    = require('gulp-concat');
 var pathsDev = {
   html: ['./dev/*.html'],
   styles: ['./dev/assets/css/*.css'],
+  svg:['./dev/assets/svg/*.*']
 };
 
 
@@ -18,6 +19,7 @@ gulp.task('minifyhtml', function() {
     .pipe(htmlmin({collapseWhitespace: true, removeComments:true, removeCommentsFromCDATA:true}))
     .pipe(gulp.dest('./build/'));
 });
+
 
 // Task for concat and minfier  and convert sass to css files 
 gulp.task('concat-min-css', function() {

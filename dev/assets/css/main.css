@@ -1,1 +1,21 @@
-body { background-color: #fff; }   
+/*
+	css file for override and create  styles 
+*/
+
+/* define background color in body */
+	body { background-color: #fff; }   
+
+/* define font fize for icons home */
+	.icon-home { font-size: 200px; }
+
+/* define styles for hover well */
+	.well-hover:hover {
+		webkit-transfrom: scale(1.05, 1.05);
+		transform: scale(1.05,1.05);
+		background-color: #000;
+		cursor: pointer; }
+
+	.well-hover:hover i { color: #fff; }
+
+/* force color style in links */
+	a { color: #000 !important; }
