@@ -1,4 +1,4 @@
 mygraphic
 =========
 
-Simple web app for graphic generate
+Simple web app for charts generate
