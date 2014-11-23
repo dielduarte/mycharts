@@ -4,7 +4,7 @@
 
 /* define background color in body */
 	body { background-color: #fff; }   
-
+ 
 /* define font fize for icons home */
 	.icon-home { font-size: 200px; }
 
@@ -12,13 +12,16 @@
 	.well-hover:hover {
 		webkit-transfrom: scale(1.05, 1.05);
 		transform: scale(1.05,1.05);
-		background-color: #000;
 		cursor: pointer; }
 
 	.well-hover:hover i { color: #fff; }
 
+	.green:hover { background-color: #0f9d58; }
+	.red:hover { background-color: #f44336; }
+	.blue:hover { background-color: #4285f4; }
+
 /* force color style in links */
-	a { color: #000 !important; }
+	a { text-decoration: none !important; }
 
 /* font size mobiwhale default */
 	.mobiwhale-title { 
@@ -43,7 +46,7 @@
 }
 
 @-webkit-keyframes lightscrool {
-	0% { margin-bottom: 20px; }
-	50% { margin-bottom: 40px; }
-	100% { margin-bottom: 20px; }
+	0% { margin-bottom: 0px; }
+	50% { margin-bottom: 10px; }
+	100% { margin-bottom: 0px; }
 }
