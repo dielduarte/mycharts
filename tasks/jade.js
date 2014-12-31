@@ -12,5 +12,5 @@ gulp.task('jade', function() {
   gulp.src('./dev/app/views/**/*.jade')
     .pipe(jade({pretty: true}))  
     .pipe(minifyHTML(opts))
-    .pipe(gulp.dest('./public/app/views/'))
+    .pipe(gulp.dest('./public/views/'))
 });

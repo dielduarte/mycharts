@@ -14,5 +14,5 @@ gulp.task('css', function() {
     .pipe(concat('main.css'))
     .pipe(minifyCSS(opts))
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./public/app/assets/css'));
+    .pipe(gulp.dest('./public/assets/css'));
 });

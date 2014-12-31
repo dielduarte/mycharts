@@ -7,5 +7,5 @@ gulp.task('copyindex', function() {
 
   gulp.src('./dev/app/index.html')
     .pipe(minifyHTML(opts))
-    .pipe(gulp.dest('./public/app/'))
+    .pipe(gulp.dest('./public/'))
 });

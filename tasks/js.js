@@ -18,5 +18,5 @@ gulp.task('js', function() {
       .pipe(ngAnnotate())
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('./public/app/assets/js/'));
+      .pipe(gulp.dest('./public/assets/js/'));
 });
