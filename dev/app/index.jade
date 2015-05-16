@@ -3,13 +3,22 @@ html(lang="en" ng-app="app")
   head
     meta(charset="UTF-8")
     title MyCharts  
+    link(rel="stylesheet", href='bower_components/angular-material/angular-material.min.css')    
     link(rel="stylesheet" href="assets/css/main.min.css")
+    meta(name="viewport" content="initial-scale=1")
   body
+    div(layout="row" layout-sm="column")
+      md-toolbar(md-scroll-shrink)
+        div(class="md-toolbar-tools")
+          h3
+            span My Charts   
     ng-view
 
 
     script(src="bower_components/angularjs/angular.min.js")
     script(src="bower_components/angular-loader/angular-loader.min.js")
+    script(src='bower_components/angular-animate/angular-animate.min.js')
     script(src="bower_components/angular-route/angular-route.min.js")
-    script(src="assets/js/main.min.js")  
-      
+    script(src='bower_components/angular-aria/angular-aria.min.js')
+    script(src='bower_components/angular-material/angular-material.min.js')
+    script(src="assets/js/main.min.js")
