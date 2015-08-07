@@ -1,4 +1,13 @@
 extends ./templates/main.jade
 
 block content
-	|pizza
+	form
+		dl.form
+			dt
+				label Digite o número de fatias (de 1 á 100)
+			dd
+				input(type="text" ng-model="slicesNumber")
+				button(type="button" class="btn btn-primary" ng-click="vm.createSlicesArray(slicesNumber)") Gerar fatias
+
+	ul
+		li(ng-repeat="fatia in vm.slices") oi

@@ -27,6 +27,14 @@
 
 		function appController($http, $location) {
 			var vm = this;
+
+			vm.createSlicesArray = createSlicesArray;
+
+			function createSlicesArray(limit){
+				vm.slices = new Array(limit);
+			}
+
+
 		}; // end appController
 
 })();
