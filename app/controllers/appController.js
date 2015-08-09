@@ -12,26 +12,41 @@
 		.controller('appController', appController);
 
 		//inject dependency	
-		appController.$inject = [	'$http',
-															'$location' ];
+		appController.$inject = [];
 
-		/**
-			*
-			* appController
-			*
-			* 
-			* @dependency - $http, 
-			*								$location 
-			*
-		**/
 
-		function appController($http, $location) {
+		function appController() {
 			var vm = this;
 
-			vm.createSlicesArray = createSlicesArray;
+			vm.createSlices = createSlices;
+			vm.validateForm = validateForm;
+			vm.test = {
+				percentIsTrue: percentIsTrue
+			};
 
-			function createSlicesArray(limit){
-				vm.slices = new Array(limit);
+			function createSlices(limit){
+				var obj = [];
+
+				for (var i = 0; i < limit; i++) {
+					obj.push({position: i});
+				}
+
+				return vm.slices = obj;
+			}
+
+			function validateForm(formSlices) {
+				if(!percentIsTrue(formSlices))
+					alert('a soma das porcentagens deve ser igual a 100');
+			}
+
+			function percentIsTrue(values) {
+				var count = 0;
+				
+				for(var i in values) {
+					count += parseInt(values[i]);
+				}
+
+				return count == 100 ? true : false;
 			}
 
 

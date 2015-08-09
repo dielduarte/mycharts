@@ -7,7 +7,23 @@ block content
 				label Digite o número de fatias (de 1 á 100)
 			dd
 				input(type="text" ng-model="slicesNumber")
-				button(type="button" class="btn btn-primary" ng-click="vm.createSlicesArray(slicesNumber)") Gerar fatias
+				button(type="button" class="btn btn-primary" ng-click="vm.createSlices(slicesNumber)") Gerar fatias
 
-	ul
-		li(ng-repeat="fatia in vm.slices") oi
+		.one-third.column 
+			label numero
+		.one-third.column 
+			label nome
+		.one-third.column 
+			label porcentagem (%)
+		
+	form(name="formSlices" ng-submit = "vm.validateForm(vm.formSlices.slice.slice)")
+		.slice(ng-repeat="slice in vm.slices")
+			.one-third.column 
+				span {{ slice.position + 1 }}
+			.one-third.column
+				input(type="text" ng-model="vm.formSlices.slice.nome[slice.position]")
+			.one-third.column
+				input(type="text" ng-model="vm.formSlices.slice.slice[slice.position]")
+			.clear
+		.form-actions
+			input(type="submit" class="btn btn-primary" value="Gerar gráfico")
