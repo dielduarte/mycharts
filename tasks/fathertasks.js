@@ -4,7 +4,7 @@ var gulp   = require('gulp');
 // Taks default gulp! 
 gulp.task('default', function(){
      gulp.start('dev');
-	gulp.start('test');
+	// gulp.start('test');
 });
 
 

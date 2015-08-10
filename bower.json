@@ -19,6 +19,7 @@
     "angular-route": "~1.3.17",
     "angular-loader": "~1.3.17",
     "angular": "~1.4.2",
-    "primer-css": "~2.3.3"
+    "primer-css": "~2.3.3",
+    "angular-chartist.js": "~3.3.6"
   }
 }

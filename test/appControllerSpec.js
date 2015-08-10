@@ -5,8 +5,8 @@ describe('AppController', function(){
 
 	beforeEach(inject(function($controller){
 		controller = $controller('appController');
-		spyOn(controller, 'validateForm');
 	}));
+
 
 
 	it('Should return object with length to equal parameter ', function() {
@@ -22,5 +22,8 @@ describe('AppController', function(){
 		expect(resultTrue).toEqual(true);
 		expect(resultFalse).toEqual(false);
 	});
+
+
+
 
 });

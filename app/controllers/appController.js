@@ -37,6 +37,8 @@
 			function validateForm(formSlices) {
 				if(!percentIsTrue(formSlices))
 					alert('a soma das porcentagens deve ser igual a 100');
+				else
+					generatePieChart(vm.formSlices.slice.slice);
 			}
 
 			function percentIsTrue(values) {
@@ -47,6 +49,17 @@
 				}
 
 				return count == 100 ? true : false;
+			}
+
+			function generatePieChart(series){
+				var arraySeries = [];
+
+				for(var i in series)
+					arraySeries.push(series[i]);
+
+				vm.pieData  = {
+      		series: arraySeries
+      	};
 			}
 
 

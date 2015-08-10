@@ -8,7 +8,7 @@ block content
 			dd
 				input(type="text" ng-model="slicesNumber")
 				button(type="button" class="btn btn-primary" ng-click="vm.createSlices(slicesNumber)") Gerar fatias
-
+	.slices(ng-if="vm.slices && !vm.pieData")
 		.one-third.column 
 			label numero
 		.one-third.column 
@@ -16,14 +16,16 @@ block content
 		.one-third.column 
 			label porcentagem (%)
 		
-	form(name="formSlices" ng-submit = "vm.validateForm(vm.formSlices.slice.slice)")
-		.slice(ng-repeat="slice in vm.slices")
-			.one-third.column 
-				span {{ slice.position + 1 }}
-			.one-third.column
-				input(type="text" ng-model="vm.formSlices.slice.nome[slice.position]")
-			.one-third.column
-				input(type="text" ng-model="vm.formSlices.slice.slice[slice.position]")
-			.clear
-		.form-actions
-			input(type="submit" class="btn btn-primary" value="Gerar gráfico")
+		form(name="formSlices" ng-submit = "vm.validateForm(vm.formSlices.slice.slice)")
+			.slice(ng-repeat="slice in vm.slices")
+				.one-third.column 
+					span {{ slice.position + 1 }}
+				.one-third.column
+					input(type="text" ng-model="vm.formSlices.slice.nome[slice.position]")
+				.one-third.column
+					input(type="text" ng-model="vm.formSlices.slice.slice[slice.position]")
+				.clear
+			.form-actions
+				input(type="submit" class="btn btn-primary" value="Gerar gráfico")
+				
+	chartist(class="ct-chart" chartist-data="vm.pieData" chartist-chart-type="Pie" ng-if="vm.pieData")

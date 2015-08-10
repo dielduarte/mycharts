@@ -12,5 +12,5 @@
     'use strict';
 
     angular
-        .module('app', ['ngRoute']);
+        .module('app', ['ngRoute', 'angular-chartist']);
 })();

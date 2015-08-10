@@ -1,7 +1,7 @@
 describe('Config: Routes', function(){
 	//instanciando o modulo antes de cada it
 	beforeEach(module('app'));
-	var $rout;
+	var $rout, chartist;
 
 	beforeEach(inject(function($route){
 		$rout = $route;

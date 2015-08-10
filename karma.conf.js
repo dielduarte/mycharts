@@ -18,6 +18,8 @@ module.exports = function(config) {
         'public/bower_components/angular/angular.min.js',
         'node_modules/angular-mocks/angular-mocks.js',
         'bower_components/angular-route/angular-route.min.js',
+        'bower_components/chartist/dist/chartist.min.js',
+        'bower_components/angular-chartist.js/dist/angular-chartist.min.js',
         'app/modules/**/*.js',
         'app/config/**/*.js',
         'app/directives/**/*.js',
